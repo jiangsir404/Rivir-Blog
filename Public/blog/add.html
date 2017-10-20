@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">	
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/simditor.css">
+    <link rel="stylesheet" type="text/css" href="css/simditor-markdown.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+    	<div class="row">
+    		<div class="col-xs-8">
+    			<form action="#" method="post" accept-charset="utf-8">
+    				<div class="input-group">
+    					<span class="input-group-addon">
+    						文章标题
+    					</span>
+    					<input class="form-control" type="text" placeholder="Title" name="title">
+    				</div>
+    				<div class="input-group">
+    					<span class="input-group-addon">封面图片</span>
+    					<input type="text" class="form-control" placeholder="Cover Image" name="cover">
+    				</div>
+    				<textarea id="editor" class="content" class="form-control" placeholder="Content" autofocus name="content" required=""></textarea>
+    					
+    				</textarea>
+    				<button class="btn btn-primary" type="button" onclick="JavaScript:history.back();">返回</button>
+    				<button class="btn btn-primary" type="button" name="artsubmit"　style="float:right;"> 提交发布</button>
+    			</form>
+    		</div>
+    	</div>
+    	
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/module.js"></script>
+  <script type="text/javascript" src="js/hotkeys.js"></script>
+  <script type="text/javascript" src="js/simditor.js"></script>
+  <script type="text/javascript" src="js/to-markdown.js"></script>
+  <script type="text/javascript" src="js/marked.js"></script>
+  <script type="text/javascript" src="js/simditor-markdown.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+ <script type="text/javascript">
+     $(function() {
+      var editor = new Simditor({
+        textarea: $('#editor'),
+        markdown: false,
+        toolbar: ['title', 'bold', 'italic', 'underline', 'strikethrough', 'color', '|', 'ol', 'ul', 'blockquote', 'code', 'table', '|', 'link', 'image', 'hr', '|', 'indent', 'outdent', 'alignment', '|', 'markdown']
+      });
+    });   
+  </script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	div>tr
+</body>
+</html>
