@@ -5,6 +5,9 @@ a ThinkPHP and Bootstrap Blog make by rivir to share
 
 功能
 
-[![forthebadge](http://forthebadge.com/images/badges/fuck-it-ship-it.svg)](http://forthebadge.com)
-
-[![forthebadge](http://forthebadge.com/images/badges/uses-html.svg)](http://forthebadge.com)
+- [x] 添加文章
+- [x] 前台文章显示
+- [] 文章编辑
+- [] 后台页面
+- [] 用户登录
+- [] 文章点击量
