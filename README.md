@@ -11,3 +11,8 @@ a ThinkPHP and Bootstrap Blog make by rivir to share
 - [ ] 后台页面
 - [ ] 用户登录
 - [ ] 文章点击量
+
+
+![](view1.png)
+![](view2.png)
+![](view3.png)
