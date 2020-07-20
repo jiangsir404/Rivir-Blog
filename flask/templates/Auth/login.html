@@ -1,0 +1,56 @@
+{% include 'Public/_meta.html' %}
+
+<div class="container col-xs-2 col-xs-offset-5">
+    <br/>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2 class="admin-title">Pbscan后台登录</h2>
+    <form>
+        <div class="form-group">
+            <label for="username" class="control-label">用户名</label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="用户名">
+        </div>
+        <div class="form-group">
+            <label for="password" class="control-label">密码</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="密码">
+        </div>
+        <div class="loginbox-submit">
+            <input type="button" class="btn btn-primary btn-block" id="login" value="登录">
+        </div>
+        <div class="pull-right"><a href="/admin/index/register">---> 注册</a></div>
+    </form>
+</div>
+
+{% include 'Public/_js.html' %}
+<script src="/static/lib/layer/layer.js"></script>
+<script>
+
+    $(function () {
+        $('#login').click(function () {
+            $.ajax({
+                url:"/auth/login",
+                type:"post",
+                data:$('form').serialize(),
+                dataType:'json',
+                success:function (data) {
+                    if (data.code == 1) {
+                        location.href = data.url;
+                    }else {
+                        layer.open({
+                            title:'登录失败',
+                            content:data.msg,
+                            icon:5,
+                            anim:6
+                        });
+                    }
+                }
+            });
+            return false;
+        });
+    });
+</script>
+</body>
+<!--  /Body -->
+</html>

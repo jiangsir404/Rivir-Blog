@@ -1,0 +1,57 @@
+{% extends "Public/base.html" %}
+
+  <block name="css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/simditor.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/simditor-markdown.css">
+  </block>
+
+  <block name="main">
+    	<div class="row">
+    		<div class="col-xs-8">
+    			<form action="#" method="POST" accept-charset="utf-8">
+    				<div class="input-group">
+    					<span class="input-group-addon">
+    						文章标题
+    					</span>
+    					<input class="form-control" type="text" placeholder="Title" name="title">
+    				</div>
+<!--     				<div class="input-group">
+    					<span class="input-group-addon">封面图片</span>
+    					<input type="text" class="form-control" placeholder="Cover Image" name="cover">
+    				</div> -->
+    				<textarea id="editor" class="content" class="form-control" placeholder="Content" autofocus name="content" required=""></textarea>
+
+<!--                   <div class="input-group">
+                    <span class="input-group addon">Tag:</span>
+                      <div class="btn-group">
+                        
+                      </div>
+                  </div> -->
+    					
+    				<button class="btn btn-primary" type="button" onclick="JavaScript:history.back();">返回</button>
+    				<button type="submit" class="btn btn-primary" type="button" name="artsubmit" style="float:right;"> 提交发布</button>
+    			</form>
+    		</div>
+    	</div>
+    </block>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <block name="js">
+      <script type="text/javascript" src="__PUBLIC__/js/module.js"></script>
+      <script type="text/javascript" src="__PUBLIC__/js/hotkeys.js"></script>
+      <script type="text/javascript" src="__PUBLIC__/js/simditor.js"></script>
+      <script type="text/javascript" src="__PUBLIC__/js/to-markdown.js"></script>
+      <script type="text/javascript" src="__PUBLIC__/js/marked.js"></script>
+      <script type="text/javascript" src="__PUBLIC__/js/simditor-markdown.js"></script>
+       <script type="text/javascript">
+       $(function() {
+        var editor = new Simditor({
+          textarea: $('#editor'),
+          markdown: false,
+          toolbar: ['title', 'bold', 'italic', 'underline', 'strikethrough', 'color', '|', 'ol', 'ul', 'blockquote', 'code', 'table', '|', 'link', 'image', 'hr', '|', 'indent', 'outdent', 'alignment', '|', 'markdown']
+        });
+      });   
+      </script>
+   </block>

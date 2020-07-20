@@ -1,0 +1,31 @@
+{% extends "Public/base.html" %}
+
+  <block name="css">
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/asciinema-player.css"> 
+  </block>
+
+
+<block name="main">  
+
+      <div class="container col-xs-10 col-xs-offset-1">
+        <div class="row">
+          <h2>Activity:</h2>
+        </div>
+        <div class="col-xs-6">
+        <div class="panel panel-info">
+          <div class="panel-heading"　style="text-align:center;font-size:20px;">
+            <i class="fa fa-user"></i>S7scan
+          </div>
+          <div class="panel-body">
+            <code>七星渗透测试工具,一共有七个模块包括可实现poc的综合扫描利用，信息收集，敏感扫描，ctf常用编解码工具等,项目地址:
+            https://github.com/SevenStar-club/s7scan</code>
+          </div>
+        </div>          
+        </div>
+        <asciinema-player src="__PUBLIC__/video/demo.json" cols="188" rows="33"></asciinema-player>
+        <asciinema-player src="__PUBLIC__/video/demo2.json" cols="188" rows="33"></asciinema-player>
+      </div>
+
+</block>
+
+<block name="js"><script src="__PUBLIC__/js/asciinema-player.js"></script></block>
